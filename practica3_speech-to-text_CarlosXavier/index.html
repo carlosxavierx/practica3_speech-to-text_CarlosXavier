@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text - Practica 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Speech to Text</h1>
+            <p>- Reconocimiento de habla en tiempo real - </p>
+            <p>- Carlos Xavier - </p>
+        </div>
+
+        <main class="main">
+            <div class="controls">
+                <button id="btnIniciar" class="btn">Iniciar</button>
+                <button id="btnDetener" class="btn" disabled>Detener</button>
+            </div>
+
+            <div class="status-indicator">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Listo</span>
+            </div>
+
+            <div class="results-area">
+                <pre id="transcript"> El texto transcrito aparecerá aquí ...</pre>
+            </div>
+
+            <div class="section">
+    <h2 class="section-title">
+        Transcripción de Audio con Gemini
+    </h2>
+
+    <label for="audioFile" class="btn btn-file">
+    Elegir Archivo
+</label>
+
+<input
+    type="file"
+    id="audioFile"
+    accept=".mp3,.wav,.m4a"
+    hidden>
+
+<p id="nombreArchivo">
+    Ningún archivo seleccionado
+</p>
+
+    <button id="btnEnviar" class="btn">
+        Subir y Transcribir
+    </button>
+
+    <div class="results-area">
+        <pre id="transcriptGemini">
+La transcripción de Gemini aparecerá aquí...
+        </pre>
+    </div>
+</div>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
